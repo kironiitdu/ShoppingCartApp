@@ -83,7 +83,7 @@ namespace ShoppingCartApp.Controllers
         public void RemoveItemFromCart(CartItem item)
         {
             var cart = HttpContext.Session.GetComplexObjectSession<ShoppingCartObject>("ShoppingCart");
-            cart!.CartItems!.Remove(cart.CartItems.Find(ctitm => ctitm.ItemName == item.ItemName));
+            cart!.CartItems!.Remove(cart.CartItems.Find(cartItem => cartItem.ItemName == item.ItemName));
             HttpContext.Session.SetComplexObjectSession("ShoppingCart", cart);
         }
     }

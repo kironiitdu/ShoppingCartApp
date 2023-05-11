@@ -7,6 +7,7 @@ namespace ShoppingCartApp.Models
         public int CartId { get; set; }
         public string? ItemName { get; set; }
         public decimal Price { get; set; }
+        public decimal Total { get; set; } = decimal.Zero;
         
     }
 }
